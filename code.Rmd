@@ -99,6 +99,17 @@ HH9_29<-twListToDF(HH9_29)
 
 ```
 
+However, it is difficult to pull the same data again, just read in the data I have already pulled
+
+```{r eval=FALSE}
+
+for(i in c(4:8,29)){
+  assign(paste("HH9",i,sep="_"),
+         read.csv(paste("9-",i,".csv",sep="")))
+  
+}
+```
+
 3.2. Delete lines without location information in the original dataset and create new dataset called cHHs.(9-4as an example)
 
 ```{r eval=FALSE}
